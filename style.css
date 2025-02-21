@@ -36,8 +36,6 @@ form input[type="text"] {
     flex-grow: 1;
 }
 
-
-
 form input[type="text"],
 button[type="button"] {
     border: none;
@@ -79,7 +77,8 @@ button[type="button"]:hover {
     max-width: 350px;
     transition: transform 0.3s ease-in-out;
 }
-.recipe:hover{
+
+.recipe:hover {
     transform: scale(1.02);
 }
 
@@ -122,7 +121,6 @@ button[type="button"]:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
     background-color: #cacfd2;
     border-radius: 12px;
     width: 40%;
@@ -141,7 +139,6 @@ button[type="button"]:hover {
     text-transform: uppercase;
     text-decoration: underline;
     margin-bottom: 10px;
-
 }
 
 .ingredientList li {
@@ -171,9 +168,9 @@ button[type="button"]:hover {
     align-items: center;
 }
 
-/*adding scrollbar to recipe detail popup*/
+/* Adding scrollbar to recipe detail popup */
 .recipe-details::-webkit-scrollbar {
-    /*scroll bar in data*/
+    /* Scroll bar in data */
     width: 10px;
 }
 
@@ -183,20 +180,83 @@ button[type="button"]:hover {
     --webkit-border-radius: 15px;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 15px;
 }
+
 body::-webkit-scrollbar-thumb {
     background-color: rgb(182, 172, 172);
 }
 
-@media screen and (max-width:600px) {
-    header nav form {
-        flex-direction: column;
+/* Mobile Media Query */
+@media screen and (max-width: 600px) {
+    /* Reset styles for mobile view */
+    body {
+        font-size: 16px;
     }
 
-    header nav form {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header nav h1 {
+        font-size: 20px;
+    }
+
+    form {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .recipe-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .recipe {
+        max-width: 100%;
+    }
+
+    .recipe img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .recipe h3 {
+        font-size: 20px;
+    }
+
+    .recipe p {
+        font-size: 16px;
+    }
+
+    .recipe button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .recipe-details {
         width: 80%;
-        margin-top: 20px;
+        height: 70%;
+    }
+
+    .recipeName {
+        font-size: 22px;
+    }
+
+    .ingredientList li {
+        font-size: 16px;
+    }
+
+    .recipeInstructions p {
+        font-size: 18px;
     }
 }
